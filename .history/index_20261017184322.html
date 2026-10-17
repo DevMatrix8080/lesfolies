@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Servizi Estetici</title>
+  <!-- Font Google per un'estetica raffinata -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Configurazione Font */
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fcf8f8; /* Sfondo leggermente rosato/caldo */
+      color: #4a4a4a;
+    }
+    .font-serif-custom {
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    /* Ombra morbida per le card fedele all'immagine originale */
+    .card-shadow {
+      box-shadow: 0 10px 30px -5px rgba(220, 180, 185, 0.25), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-shadow:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 35px -5px rgba(210, 160, 168, 0.35), 0 6px 15px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    /* Colore d'accento bordeaux / rosa antico */
+    .text-accent {
+      color: #b05c6d;
+    }
+    
+    /* Overlay sfumato per le immagini con placeholder se manca l'immagine */
+    .img-gradient-placeholder {
+      background: linear-gradient(135deg, #c4c4c4 0%, #9e9e9e 100%);
+    }
+  </style>
+</head>
+<body class="p-4 md:p-8 flex justify-center items-center min-h-screen">
+
+  <!-- Griglia Contenitore: 3 per riga su desktop (lg), 2 su tablet (md), 1 su mobile -->
+  <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+
+    <!-- CARD 1 -->
+    <div class="bg-white rounded-2xl overflow-hidden card-shadow flex flex-col justify-between">
+      <div>
+        <!-- Immagine con badge -->
+        <div class="relative h-52 w-full overflow-hidden img-gradient-placeholder">
+          <img 
+            src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=800&auto=format&fit=crop" 
+            alt="Pulizia viso" 
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'"
+          />
+          <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+            1h
+          </span>
+        </div>
+        <!-- Contenuto -->
+        <div class="p-6">
+          <h3 class="font-serif-custom text-2xl font-semibold text-gray-800 leading-snug mb-3">
+            Pulizia viso idratante e detossinante
+          </h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+        </div>
+      </div>
+      <!-- Footer della Card -->
+      <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+        <span class="font-serif-custom text-2xl font-semibold text-accent">50 €</span>
+        <a href="#" class="text-accent hover:opacity-80 text-xs font-semibold flex items-center gap-1 transition-opacity">
+          Prenota <span class="text-sm">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="bg-white rounded-2xl overflow-hidden card-shadow flex flex-col justify-between">
+      <div>
+        <!-- Immagine con badge -->
+        <div class="relative h-52 w-full overflow-hidden img-gradient-placeholder">
+          <img 
+            src="https://images.unsplash.com/photo-1512290900673-700200411996?q=80&w=800&auto=format&fit=crop" 
+            alt="Trattamento PNEI" 
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'"
+          />
+          <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+            1h
+          </span>
+        </div>
+        <!-- Contenuto -->
+        <div class="p-6">
+          <h3 class="font-serif-custom text-2xl font-semibold text-gray-800 leading-snug mb-3">
+            Trattamento viso personalizzato PNEI
+          </h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+        </div>
+      </div>
+      <!-- Footer della Card -->
+      <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+        <span class="font-serif-custom text-2xl font-semibold text-accent">55 €</span>
+        <a href="#" class="text-accent hover:opacity-80 text-xs font-semibold flex items-center gap-1 transition-opacity">
+          Prenota <span class="text-sm">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-white rounded-2xl overflow-hidden card-shadow flex flex-col justify-between">
+      <div>
+        <!-- Immagine con badge (gradiente placeholder grigio come da foto) -->
+        <div class="relative h-52 w-full overflow-hidden img-gradient-placeholder">
+          <img 
+            src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=800&auto=format&fit=crop" 
+            alt="Pressoterapia" 
+            class="w-full h-full object-cover opacity-90"
+            onerror="this.style.display='none'"
+          />
+          <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+            30 min
+          </span>
+        </div>
+        <!-- Contenuto -->
+        <div class="p-6">
+          <h3 class="font-serif-custom text-2xl font-semibold text-gray-800 leading-snug mb-3">
+            Pressoterapia rimodellante LinfoDerm
+          </h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+        </div>
+      </div>
+      <!-- Footer della Card -->
+      <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+        <span class="font-serif-custom text-2xl font-semibold text-accent">40 €</span>
+        <a href="#" class="text-accent hover:opacity-80 text-xs font-semibold flex items-center gap-1 transition-opacity">
+          Prenota <span class="text-sm">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-white rounded-2xl overflow-hidden card-shadow flex flex-col justify-between">
+      <div>
+        <!-- Immagine con badge -->
+        <div class="relative h-52 w-full overflow-hidden img-gradient-placeholder">
+          <img 
+            src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" 
+            alt="Ricostruzione unghie" 
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'"
+          />
+          <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+            1h 30min
+          </span>
+        </div>
+        <!-- Contenuto -->
+        <div class="p-6">
+          <h3 class="font-serif-custom text-2xl font-semibold text-gray-800 leading-snug mb-3">
+            Ricostruzione unghie in gel
+          </h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+        </div>
+      </div>
+      <!-- Footer della Card -->
+      <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+        <span class="font-serif-custom text-2xl font-semibold text-accent"><span class="text-base font-normal">da </span>45 €</span>
+        <a href="#" class="text-accent hover:opacity-80 text-xs font-semibold flex items-center gap-1 transition-opacity">
+          Prenota <span class="text-sm">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="bg-white rounded-2xl overflow-hidden card-shadow flex flex-col justify-between">
+      <div>
+        <!-- Immagine con badge -->
+        <div class="relative h-52 w-full overflow-hidden img-gradient-placeholder">
+          <img 
+            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?q=80&w=800&auto=format&fit=crop" 
+            alt="Sopracciglia" 
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'"
+          />
+          <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+            2h
+          </span>
+        </div>
+        <!-- Contenuto -->
+        <div class="p-6">
+          <h3 class="font-serif-custom text-2xl font-semibold text-gray-800 leading-snug mb-3">
+            Semipermanente sopracciglia
+          </h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+        </div>
+      </div>
+      <!-- Footer della Card -->
+      <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+        <span class="font-serif-custom text-2xl font-semibold text-accent"><span class="text-base font-normal">da </span>250 €</span>
+        <a href="#" class="text-accent hover:opacity-80 text-xs font-semibold flex items-center gap-1 transition-opacity">
+          Prenota <span class="text-sm">→</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="bg-white rounded-2xl overflow-hidden card-shadow flex flex-col justify-between">
+      <div>
+        <!-- Immagine con badge -->
+        <div class="relative h-52 w-full overflow-hidden img-gradient-placeholder">
+          <img 
+            src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" 
+            alt="Extension Ciglia" 
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'"
+          />
+          <span class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm text-gray-700 text-xs font-semibold px-3 py-1 rounded-full shadow-sm">
+            2h
+          </span>
+        </div>
+        <!-- Contenuto -->
+        <div class="p-6">
+          <h3 class="font-serif-custom text-2xl font-semibold text-gray-800 leading-snug mb-3">
+            Extension ciglia one to one
+          </h3>
+          <p class="text-gray-500 text-xs leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+          </p>
+        </div>
+      </div>
+      <!-- Footer della Card -->
+      <div class="px-6 pb-6 pt-2 flex items-center justify-between">
+        <span class="font-serif-custom text-2xl font-semibold text-accent"><span class="text-base font-normal">da </span>80 €</span>
+        <a href="#" class="text-accent hover:opacity-80 text-xs font-semibold flex items-center gap-1 transition-opacity">
+          Prenota <span class="text-sm">→</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

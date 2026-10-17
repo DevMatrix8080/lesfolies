@@ -1,0 +1,290 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap');
+
+    .cards-grid-wrapper * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .cards-grid-wrapper {
+        font-family: 'Inter', sans-serif;
+        background-color: transparent;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+
+    /* Layout responsive */
+    @media (max-width: 900px) {
+        .cards-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .cards-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card {
+        background: #ffffff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(185, 140, 150, 0.12);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 15px 35px rgba(185, 140, 150, 0.18);
+    }
+
+    .card-image-container {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        background: linear-gradient(135deg, #d3c9cd, #b8adb3);
+        overflow: hidden;
+    }
+
+    .card-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .time-badge {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        background-color: rgba(255, 255, 255, 0.92);
+        color: rgb(36, 28, 32);
+        font-size: 11px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 20px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .card-content {
+        padding: 24px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    .card-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: rgb(36, 28, 32);
+        line-height: 1.2;
+        margin-bottom: 12px;
+    }
+
+    .card-description {
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(36, 28, 32, 0.65);
+        line-height: 1.5;
+        margin-bottom: 24px;
+    }
+
+    .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-top: 10px;
+    }
+
+    .card-price {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 24px;
+        font-weight: 500;
+        color: #aa5b71;
+    }
+
+    .card-price .prefix {
+        font-size: 18px;
+        margin-right: 2px;
+    }
+
+    .card-button {
+        color: #aa5b71;
+        font-size: 13px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        transition: color 0.2s;
+    }
+
+    .card-button:hover {
+        color: #843f52;
+    }
+</style>
+
+<div class="cards-grid-wrapper">
+    <div class="cards-grid">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <div>
+                <div class="card-image-container">
+                    <!-- Inserisci l'URL dell'immagine nel valore di src se desideri un'immagine -->
+                    <!-- <img src="URL_IMMAGINE_1" alt="Pulizia viso"> -->
+                    <div class="time-badge">1h</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Pulizia viso idratante e detossinante</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content" style="padding-top: 0;">
+                <div class="card-footer">
+                    <span class="card-price">50 €</span>
+                    <a href="#" class="card-button">Prenota &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div>
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=500&auto=format&fit=crop"
+                        alt="Trattamento viso">
+                    <div class="time-badge">1h</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Trattamento viso personalizzato PNEI</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content" style="padding-top: 0;">
+                <div class="card-footer">
+                    <span class="card-price">55 €</span>
+                    <a href="#" class="card-button">Prenota &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div>
+                <div class="card-image-container">
+                    <!-- <img src="URL_IMMAGINE_3" alt="Pressoterapia"> -->
+                    <div class="time-badge">30 min</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Pressoterapia rimodellante LinfoDerm</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content" style="padding-top: 0;">
+                <div class="card-footer">
+                    <span class="card-price">40 €</span>
+                    <a href="#" class="card-button">Prenota &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <div>
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=500&auto=format&fit=crop"
+                        alt="Ricostruzione unghie">
+                    <div class="time-badge">1h 30min</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Ricostruzione unghie in gel</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content" style="padding-top: 0;">
+                <div class="card-footer">
+                    <span class="card-price"><span class="prefix">da</span> 45 €</span>
+                    <a href="#" class="card-button">Prenota &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <div>
+                <div class="card-image-container">
+                    <!-- <img src="URL_IMMAGINE_5" alt="Semipermanente sopracciglia"> -->
+                    <div class="time-badge">2h</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Semipermanente sopracciglia</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content" style="padding-top: 0;">
+                <div class="card-footer">
+                    <span class="card-price"><span class="prefix">da</span> 250 €</span>
+                    <a href="#" class="card-button">Prenota &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <div>
+                <div class="card-image-container">
+                    <img src=""
+                        alt="Extension ciglia">
+                    <div class="time-badge">2h</div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Massaggio</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+            </div>
+            <div class="card-content" style="padding-top: 0;">
+                <div class="card-footer">
+                    <span class="card-price"><span class="prefix">da</span> 80 €</span>
+                    <a href="#" class="card-button">Prenota &rarr;</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
