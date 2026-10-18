@@ -82,3 +82,42 @@ addEventListener("keydown", (e) => {
   addEventListener("resize", () => go(idx));
   go(0);
 })();
+
+/* SERVIZI: la categoria visibile evidenzia il suo pulsante nella barra */
+(() => {
+  const nav = document.querySelector(".cat-nav");
+  if (!nav || !("IntersectionObserver" in window)) return;
+  const links = [...nav.querySelectorAll("a")];
+  const sezioni = links
+    .map((a) => document.getElementById(a.getAttribute("href").slice(1)))
+    .filter(Boolean);
+  const attiva = (id) => {
+    links.forEach((a) => {
+      const on = a.getAttribute("href") === "#" + id;
+      if (on) {
+        a.setAttribute("aria-current", "true");
+        nav.scrollTo({
+          left: a.offsetLeft - nav.clientWidth / 2 + a.clientWidth / 2,
+        });
+      } else a.removeAttribute("aria-current");
+    });
+  };
+  const io = new IntersectionObserver(
+    (voci) => voci.forEach((v) => v.isIntersecting && attiva(v.target.id)),
+    { rootMargin: "-30% 0px -60% 0px" },
+  );
+  sezioni.forEach((s) => io.observe(s));
+})();
+
+/* CONTATTI: evidenzia il giorno corrente negli orari (fuso di Roma) */
+(() => {
+  const lista = document.querySelector(".orari-lista");
+  if (!lista) return;
+  const sigla = new Intl.DateTimeFormat("en-US", {
+    weekday: "short",
+    timeZone: "Europe/Rome",
+  }).format(new Date());
+  const n = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[sigla];
+  const riga = lista.querySelector('[data-giorno="' + n + '"]');
+  if (riga) riga.classList.add("oggi");
+})();

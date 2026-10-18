@@ -7,12 +7,18 @@
   <title>Les Folies · Centro estetico a Lido di Jesolo</title>
   <meta name="description"
     content="Centro estetico a Lido di Jesolo: trucco semipermanente certificato Biotek, ricostruzione unghie in gel, trattamenti viso e corpo con cosmesi PNEI. Prenota online.">
-  <meta name="theme-color" content="#CE5F86">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Les Folies">
+  <meta property="og:title" content="Les Folies · Centro estetico a Lido di Jesolo">
+  <meta property="og:description" content="Trucco semipermanente certificato Biotek, ricostruzione unghie in gel, trattamenti viso e corpo con cosmesi PNEI.">
+  <meta name="theme-color" content="#A04264">
   <link rel="icon" href="https://lesfoilesjesolo.livenbit.it/images/logo/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -21,15 +27,15 @@
 
   <header id="header">
     <div class="contenitore nav">
-      <a class="brand" href="#" aria-label="Les Folies, torna alla home">
+      <a class="brand" href="index.html" aria-label="Les Folies, torna alla home">
         <img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png" alt="Les Folies"
           onerror="this.style.display='none'">
       </a>
       <nav class="nav-links">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#chi-siamo">Chi siamo</a>
-        <a class="nav-link" href="#servizi">Servizi</a>
-        <a class="nav-link" href="#contatti">Contatti</a>
+        <a class="nav-link active" href="index.html">Home</a>
+        <a class="nav-link" href="chi-siamo.html">Chi siamo</a>
+        <a class="nav-link" href="servizi.html">Servizi</a>
+        <a class="nav-link" href="contatti.html">Contatti</a>
         <a class="nav-contact" href="tel:+393485286211" aria-label="Chiama Les Folies: +39 348 528 6211"><svg
             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
@@ -46,10 +52,10 @@
     <div class="mobile-panel" role="dialog" aria-label="Menu di navigazione">
       <p class="occhiello">Menu</p>
       <nav class="mobile-nav">
-        <a href="#"><small>01</small>Home</a>
-        <a href="#chi-siamo"><small>02</small>Chi siamo</a>
-        <a href="#servizi"><small>03</small>Servizi</a>
-        <a href="#contatti"><small>04</small>Contatti</a>
+        <a href="index.html"><small>01</small>Home</a>
+        <a href="chi-siamo.html"><small>02</small>Chi siamo</a>
+        <a href="servizi.html"><small>03</small>Servizi</a>
+        <a href="contatti.html"><small>04</small>Contatti</a>
       </nav>
       <div class="mobile-contact">
         <a class="tel" href="tel:+393485286211">+39 348 528 6211</a>
@@ -60,8 +66,8 @@
 
   <main>
     <!-- HERO -->
-    <section class="hero" style="padding:0">
-      <img class="hero-bg"
+    <section class="hero">
+      <img class="hero-bg" fetchpriority="high" decoding="async"
         src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&fit=crop&w=2000&q=80"
         alt="Dettaglio di un trattamento estetico da Les Folies">
       <div class="hero-veil"></div>
@@ -112,7 +118,7 @@
                 <path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5" />
               </svg></div>
             <h3>Dal 2016</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+            <p>Sandra lavora nell'estetica dal 2016 e ha voluto un salone raccolto, dove ci si sente ospiti.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -120,7 +126,7 @@
                 <path d="M12 8v6M9 11h6" />
               </svg></div>
             <h3>Cosmesi PNEI</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+            <p>Senza parabeni né petrolati, con ingredienti di origine naturale affini alla pelle.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -128,7 +134,7 @@
                 <path d="M12 7v5l3 3" />
               </svg></div>
             <h3>Colori Biotek</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+            <p>Coloranti certificati per il trucco semipermanente, con protocolli di igiene e monouso rigorosi.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -136,97 +142,91 @@
                 <path d="M16 2v4M8 2v4M3 10h18" />
               </svg></div>
             <h3>Prenoti in un minuto</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+            <p>Prenota online quando vuoi, anche a salone chiuso. Ti bastano un minuto e un numero di telefono.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- TRATTAMENTI -->
-    <section class="trattamenti" id="servizi" style="padding-top:2rem">
+    <section class="trattamenti" id="servizi">
       <div class="contenitore">
         <div class="sec-head center">
           <p class="occhiello">I nostri trattamenti</p>
-          <h2 class="titolo-sezione" style="margin-top:.8rem">Scelti insieme, <em>su di te</em></h2>
+          <h2 class="titolo-sezione">Scelti insieme, <em>su di te</em></h2>
           <p class="sottotitolo">Dalla ricostruzione unghie al trucco semipermanente, dai rituali corpo alla cura del
             viso: ogni trattamento parte da una consulenza per capire di cosa ha davvero bisogno la tua pelle.</p>
         </div>
         <div class="cards-grid">
           <article class="card">
-            <div class="card-img"><img
+            <div class="card-img"><img loading="lazy" decoding="async"
                 src="https://lesfoilesjesolo.livenbit.it/images/pulizia-viso-idratante-e-detossinante.jpg"
                 alt="Pulizia viso idratante e detossinante"
                 onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80'"><span
                 class="time-badge">1h</span></div>
             <div class="card-body">
               <h3>Pulizia viso idratante e detossinante</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Consulenza e analisi della pelle, latte detergente, esfoliazione, estrazione delle impurità e crema idratante nutriente. Una pelle rigenerata, sana e luminosa.</p>
               <div class="card-foot"><span class="price">50 €</span></div>
             </div>
           </article>
           <article class="card">
-            <div class="card-img"><img
+            <div class="card-img"><img loading="lazy" decoding="async"
                 src="https://lesfoilesjesolo.livenbit.it/images/trattamento-viso-personalizzato-PNEI.jpg"
                 alt="Trattamento viso personalizzato PNEI"
                 onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80'"><span
                 class="time-badge">1h</span></div>
             <div class="card-body">
               <h3>Trattamento viso personalizzato PNEI</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Protocollo costruito sulla tua pelle con la neurocosmesi PNEI: peptidi, fosfolipidi e aloina agiscono in sinergia con sistema nervoso, endocrino e immunitario.</p>
               <div class="card-foot"><span class="price">55 €</span></div>
             </div>
           </article>
           <article class="card">
-            <div class="card-img"><img
+            <div class="card-img"><img loading="lazy" decoding="async"
                 src="https://lesfoilesjesolo.livenbit.it/images/pressoterapia-rimodellante-LinfoDerm.jpg"
                 alt="Pressoterapia rimodellante LinfoDerm"
                 onerror="this.src='https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=800&q=80'"><span
                 class="time-badge">30 min</span></div>
             <div class="card-body">
               <h3>Pressoterapia rimodellante LinfoDerm</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Gambali gonfiabili a pressioni differenziate agiscono sulla circolazione venosa e linfatica: effetto rimodellante, tonificante e drenante sui liquidi in eccesso.</p>
               <div class="card-foot"><span class="price">40 €</span></div>
             </div>
           </article>
           <article class="card">
-            <div class="card-img"><img
+            <div class="card-img"><img loading="lazy" decoding="async"
                 src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=80"
                 alt="Ricostruzione unghie in gel"><span class="time-badge">1h 30min</span></div>
             <div class="card-body">
               <h3>Ricostruzione unghie in gel</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Ricostruzione su misura con gel di qualità professionale: forma, lunghezza e finitura scelte insieme a te.</p>
               <div class="card-foot"><span class="price"><small>da</small> 45 €</span></div>
             </div>
           </article>
           <article class="card">
-            <div class="card-img"><img src="https://lesfoilesjesolo.livenbit.it/images/semipermanente-sopracciglia.jpg"
+            <div class="card-img"><img loading="lazy" decoding="async" src="https://lesfoilesjesolo.livenbit.it/images/semipermanente-sopracciglia.jpg"
                 alt="Semipermanente sopracciglia"
                 onerror="this.src='https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80'"><span
                 class="time-badge">2h</span></div>
             <div class="card-body">
               <h3>Semipermanente sopracciglia</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Dermopigmentazione a pelo o effetto sfumato con coloranti certificati Biotek. Include consulenza sulla forma e ritocco di controllo.</p>
               <div class="card-foot"><span class="price"><small>da</small> 250 €</span></div>
             </div>
           </article>
           <article class="card">
-            <div class="card-img"><img
+            <div class="card-img"><img loading="lazy" decoding="async"
                 src="https://images.unsplash.com/photo-1700760933574-9f0f4ea9aa3b?auto=format&fit=crop&w=800&q=80"
                 alt="Trattamento di epilazione laser su una gamba"><span class="time-badge">45 min</span></div>
             <div class="card-body">
               <h3>Laser</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam.</p>
+              <p>Valutazione di fototipo, zona e numero di sedute necessarie, con apparecchiature di ultima generazione. Consulenza gratuita e senza impegno.</p>
               <div class="card-foot"><span class="price"><small>da</small> 80 €</span></div>
             </div>
           </article>
         </div>
-        <div class="center-cta"><a class="btn btn-outline" href="#servizi">Tutti i servizi e i prezzi</a></div>
+        <div class="center-cta"><a class="btn btn-outline" href="servizi.html">Tutti i servizi e i prezzi</a></div>
       </div>
     </section>
 
@@ -234,21 +234,21 @@
     <section id="chi-siamo">
       <div class="contenitore about-grid">
         <div class="about-photo">
-          <img class="main"
+          <img class="main" loading="lazy" decoding="async"
             src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1000&q=80"
-            alt="Placeholder — Sandra Bensi nel centro estetico Les Folies">
+            alt="Sandra Bensi nel centro estetico Les Folies">
           <div class="about-exp"><b>2016</b><span>nel settore estetico</span></div>
         </div>
         <div class="about-copy">
           <p class="occhiello">Chi siamo</p>
-          <h2 class="titolo-sezione" style="margin-top:.8rem">Sandra <em>Bensi</em></h2>
+          <h2 class="titolo-sezione">Sandra <em>Bensi</em></h2>
           <p>Les Folies è un piccolo centro estetico a Lido di Jesolo, nato attorno a un'idea semplice: il benessere di
             chi entra viene prima del trattamento che ha prenotato.</p>
           <p>Sandra lavora nell'estetica dal 2016 e ha costruito il salone scegliendo apparecchiature di ultima
             generazione e cosmetici che rispettano la pelle. Nessun protocollo uguale per tutte: si parte sempre da una
             consulenza.</p>
-          <div style="margin-top:1.8rem;display:flex;gap:.8rem;flex-wrap:wrap;"><a class="btn btn-primary"
-              href="#chi-siamo">La nostra storia</a></div>
+          <div><a class="btn btn-primary"
+              href="chi-siamo.html">La nostra storia</a></div>
         </div>
       </div>
     </section>
@@ -258,7 +258,7 @@
       <div class="contenitore pnei-grid">
         <div>
           <p class="occhiello">I prodotti che scegliamo</p>
-          <h2 style="margin-top:.8rem">Cosmesi <em>PNEI</em></h2>
+          <h2>Cosmesi <em>PNEI</em></h2>
           <p>PNEI sta per psiconeuroendocrinoimmunologia: la scienza che studia il legame fra psiche, sistema nervoso,
             endocrino e immunitario. Sono neurocosmetici che agiscono sull'inestetismo e, insieme, sul modo in cui ci si
             sente.</p>
@@ -271,7 +271,7 @@
             <div class="pnei-item"><b>Biotek</b><span>Pigmenti certificati per il semipermanente</span></div>
           </div>
         </div>
-        <div class="pnei-photo"><img
+        <div class="pnei-photo"><img loading="lazy" decoding="async"
             src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80"
             alt="Rituale viso con cosmesi PNEI"></div>
       </div>
@@ -282,7 +282,7 @@
       <div class="contenitore">
         <div class="sec-head center">
           <p class="occhiello">Dicono di noi</p>
-          <h2 class="titolo-sezione" style="margin-top:.8rem">Le parole delle <em>clienti</em></h2>
+          <h2 class="titolo-sezione">Le parole delle <em>clienti</em></h2>
         </div>
         <div class="reviews-slider" id="reviewsSlider">
           <div class="reviews-track">
@@ -408,8 +408,8 @@
     <div class="contenitore">
       <div class="foot-grid">
         <div class="foot-brand">
-          <a class="brand" href="#"><img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png"
-              alt="Les Folies"><span class="logo-text" style="color:#fff"><b>Les Folies</b><span>estetica ·
+          <a class="brand" href="index.html"><img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png"
+              alt="Les Folies"><span class="logo-text"><b>Les Folies</b><span>estetica ·
                 jesolo</span></span></a>
           <p>Il tuo atelier del benessere a Lido di Jesolo. Trattamenti su misura con cosmesi PNEI e trucco
             semipermanente certificato Biotek.</p>
@@ -430,10 +430,10 @@
         <div>
           <h4>Esplora</h4>
           <ul class="foot-list foot-nav">
-            <li><a href="#">Home</a></li>
-            <li><a href="#chi-siamo">Chi siamo</a></li>
-            <li><a href="#servizi">Servizi</a></li>
-            <li><a href="#contatti">Contatti</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi siamo</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
           </ul>
         </div>
         <div>
@@ -461,7 +461,7 @@
       </div>
       <div class="foot-bottom">
         <span>© 2026 Les Folies di Sandra Bensi · P.IVA 04019240276</span>
-        <span><a href="#">Privacy e cookie</a> · <a href="#">Area riservata</a></span>
+        <span><a href="https://lesfoilesjesolo.livenbit.it/privacy" target="_blank" rel="noopener">Privacy e cookie</a> · <a href="https://lesfoilesjesolo.livenbit.it/admin" target="_blank" rel="noopener">Area riservata</a></span>
       </div>
       <div class="foot-giant" aria-hidden="true">Les Folies</div>
     </div>
