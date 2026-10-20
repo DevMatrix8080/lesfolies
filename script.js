@@ -7,6 +7,7 @@ addEventListener(
 
 const burger = document.getElementById("burger");
 const mm = document.getElementById("mobileMenu");
+const menuLinks = [...mm.querySelectorAll(".mobile-nav a")];
 
 function setMenu(open) {
   mm.classList.toggle("open", open);
@@ -15,17 +16,33 @@ function setMenu(open) {
   burger.setAttribute("aria-label", open ? "Chiudi il menu" : "Apri il menu");
   mm.setAttribute("aria-hidden", !open);
   document.body.classList.toggle("menu-open", open);
+  if (open) menuLinks[0]?.focus({ preventScroll: true });
+  else burger.focus({ preventScroll: true });
 }
 
 burger.addEventListener("click", () => setMenu(!mm.classList.contains("open")));
 mm.querySelector("[data-close]").addEventListener("click", () =>
   setMenu(false),
 );
-mm.querySelectorAll("a").forEach((a) =>
-  a.addEventListener("click", () => setMenu(false)),
-);
+menuLinks.forEach((a) => a.addEventListener("click", () => setMenu(false)));
+mm.addEventListener("keydown", (e) => {
+  if (e.key !== "Tab" || !mm.classList.contains("open")) return;
+  const first = menuLinks[0];
+  const last = mm.querySelector(".mobile-contact a");
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
+});
 addEventListener("keydown", (e) => {
   if (e.key === "Escape" && mm.classList.contains("open")) setMenu(false);
+});
+addEventListener("resize", () => {
+  if (matchMedia("(min-width: 768px)").matches && mm.classList.contains("open"))
+    setMenu(false);
 });
 
 /* SLIDER RECENSIONI */

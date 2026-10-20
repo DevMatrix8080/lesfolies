@@ -49,11 +49,11 @@
     <div class="mobile-backdrop" data-close></div>
     <div class="mobile-panel" role="dialog" aria-label="Menu di navigazione">
       <p class="occhiello">Menu</p>
-      <nav class="mobile-nav">
-        <a href="index.html"><small>01</small>Home</a>
-        <a href="chi-siamo.html"><small>02</small>Chi siamo</a>
-        <a href="servizi.html"><small>03</small>Servizi</a>
-        <a href="contatti.html"><small>04</small>Contatti</a>
+      <nav class="mobile-nav" aria-label="Navigazione principale">
+        <a href="index.html"><small>01</small><span>Home</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7"/><path d="M5 9v11h14V9M9 20v-7h6v7"/></svg></a>
+        <a href="chi-siamo.html" class="current" aria-current="page"><small>02</small><span>Chi siamo</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M5 21v-2a7 7 0 0 1 14 0v2"/></svg></a>
+        <a href="servizi.html"><small>03</small><span>Servizi</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg></a>
+        <a href="contatti.html"><small>04</small><span>Contatti</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></a>
       </nav>
       <div class="mobile-contact">
         <a class="tel" href="tel:+393485286211">+39 348 528 6211</a>
@@ -73,10 +73,10 @@
 
     <section>
       <div class="contenitore about-grid">
-        <div class="about-photo">
-          <img class="main" loading="lazy" decoding="async" src="https://lesfoilesjesolo.livenbit.it/images/chi%20siamo.jpg"
-            alt="Sandra Bensi con la figlia e socia, nel centro estetico Les Folies"
-            onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;w=1400&amp;q=80'">
+        <div class="about-photo about-photo-placeholder" role="img" aria-label="Spazio per la fotografia del centro estetico">
+          <div class="placeholder-mark" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="5" y="8" width="38" height="32" rx="5"/><circle cx="18" cy="20" r="4"/><path d="m8 35 11-10 7 6 5-5 9 10"/></svg></div>
+          <span>Uno spazio per la vostra storia</span>
+          <i>LES FOLIES · JESOLO</i>
         </div>
         <div class="about-copy">
           <h2 class="titolo-sezione">Come <em>lavoriamo</em></h2>
@@ -150,13 +150,6 @@
       </div>
     </section>
 
-    <section class="invito">
-      <div class="contenitore invito-inner">
-        <h2>Passa a trovarci</h2>
-        <p>Siamo in Piazza Nicolò Tommaseo 2A, a Lido di Jesolo. La consulenza è gratuita e senza impegno.</p>
-        <div class="invito-cta"><a class="btn btn-primary" href="https://lesfoilesjesolo.livenbit.it/prenota" target="_blank" rel="noopener">Prenota una consulenza</a><a class="btn btn-ghost" href="servizi.html">Guarda i trattamenti</a></div>
-      </div>
-    </section>
   </main>
 
   <footer id="contatti">
@@ -216,7 +209,7 @@
       </div>
       <div class="foot-bottom">
         <span>© 2026 Les Folies di Sandra Bensi · P.IVA 04019240276</span>
-        <span><a href="https://lesfoilesjesolo.livenbit.it/privacy" target="_blank" rel="noopener">Privacy e cookie</a> · <a href="https://lesfoilesjesolo.livenbit.it/admin" target="_blank" rel="noopener">Area riservata</a></span>
+        <span><a href="https://lesfoilesjesolo.livenbit.it/privacy" target="_blank" rel="noopener">Privacy e cookie</a></span>
       </div>
       <div class="foot-giant" aria-hidden="true">Les Folies</div>
     </div>
