@@ -124,6 +124,20 @@ addEventListener("resize", () => {
     { rootMargin: "-30% 0px -60% 0px" },
   );
   sezioni.forEach((s) => io.observe(s));
+
+  /* La barra prende lo sfondo "vetro" solo mentre è agganciata */
+  const wrap = nav.closest(".cat-nav-wrap");
+  if (wrap) {
+    const aggiorna = () => {
+      const top = parseFloat(getComputedStyle(wrap).top) || 0;
+      wrap.classList.toggle(
+        "is-stuck",
+        wrap.getBoundingClientRect().top <= top + 1,
+      );
+    };
+    addEventListener("scroll", aggiorna, { passive: true });
+    aggiorna();
+  }
 })();
 
 /* CONTATTI: evidenzia il giorno corrente negli orari (fuso di Roma) */

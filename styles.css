@@ -109,6 +109,22 @@ body {
   text-rendering: optimizeLegibility
 }
 
+/* Un unico fondo continuo: le sezioni chiare restano trasparenti,
+   così non si vedono stacchi di colore tra una sezione e l'altra */
+main {
+  background:
+    radial-gradient(ellipse 55% 22% at 4% 12%, rgba(222, 163, 179, .2), transparent 70%),
+    radial-gradient(ellipse 50% 20% at 98% 54%, rgba(230, 203, 149, .18), transparent 70%),
+    linear-gradient(180deg,
+      #fffdfc 0%,
+      var(--porcellana) 20%,
+      #f9f0ec 42%,
+      var(--velo) 62%,
+      #faf2ef 80%,
+      var(--porcellana) 100%);
+  background-repeat: no-repeat
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -901,21 +917,6 @@ header.scrolled .burger.open {
   width: 100%
 }
 
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: .55rem;
-  border: 1px solid rgba(255, 255, 255, .3);
-  background: rgba(255, 255, 255, .1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  color: #fff;
-  border-radius: 9999px;
-  padding: .5rem 1.2rem;
-  font-size: .88rem;
-  letter-spacing: .06em
-}
-
 .hero h1 {
   font-family: var(--font-display);
   line-height: .94;
@@ -988,53 +989,7 @@ header.scrolled .burger.open {
 /* Caratteristiche */
 .features--atelier {
   position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse 46% 58% at 3% 2%, rgba(222, 163, 179, .24), transparent 72%),
-    radial-gradient(ellipse 42% 54% at 100% 100%, rgba(230, 203, 149, .2), transparent 70%),
-    linear-gradient(145deg, #fffdfc 0%, var(--porcellana) 54%, #f8efeb 100%)
-}
-
-.features--atelier::before,
-.features--atelier::after {
-  position: absolute;
-  z-index: 0;
-  pointer-events: none;
-  color: rgba(140, 44, 76, .045);
-  font-family: var(--font-display);
-  font-style: italic
-}
-
-.features--atelier::before {
-  content: "Les Folies";
-  top: 1.4rem;
-  right: -1.8rem;
-  font-size: clamp(7rem, 18vw, 15rem);
-  line-height: 1;
-  white-space: nowrap
-}
-
-.features--atelier::after {
-  content: "";
-  top: auto;
-  right: auto;
-  bottom: -14rem;
-  left: -10rem;
-  width: 34rem;
-  height: 34rem;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(194, 74, 114, .18), transparent 70%);
-  filter: blur(38px);
-  animation: deriva-aura 18s ease-in-out infinite alternate
-}
-
-@keyframes deriva-aura {
-  from {
-    transform: translate3d(0, 0, 0) scale(1)
-  }
-  to {
-    transform: translate3d(6rem, -3rem, 0) scale(1.15)
-  }
+  overflow: hidden
 }
 
 .features--atelier .contenitore {
@@ -1278,12 +1233,6 @@ header.scrolled .burger.open {
 }
 
 /* Trattamenti */
-.trattamenti {
-  background:
-    radial-gradient(ellipse 45% 35% at 90% 100%, rgba(208, 124, 151, .24), transparent 70%),
-    linear-gradient(180deg, var(--porcellana) 0%, var(--velo) 100%)
-}
-
 .cards-grid {
   display: grid;
   gap: 1.5rem;
@@ -2317,7 +2266,6 @@ footer h4 {
     animation: zoom-apertura 2.6s var(--ease) both
   }
 
-  .hero-badge,
   .hero h1,
   .hero p.lead,
   .hero-cta,
@@ -2325,12 +2273,8 @@ footer h4 {
     animation: salita 1s var(--ease) both
   }
 
-  .hero-badge {
-    animation-delay: .15s
-  }
-
   .hero h1 {
-    animation-delay: .3s
+    animation-delay: .15s
   }
 
   .hero p.lead {
@@ -2606,7 +2550,6 @@ footer h4 {
 
   footer::after,
   .wa-float::before,
-  .features--atelier::after,
   .foot-giant,
   .foot-giant.reveal.is-visible {
     animation: none
@@ -2623,12 +2566,10 @@ footer h4 {
   .nav-link,
   .nav-contact,
   .burger,
-  .hero-badge,
   .hero h1,
   .hero p.lead,
   .hero-cta,
   .hero-rating,
-  .features--atelier::after,
   footer::after,
   .foot-giant,
   .foot-giant.reveal.is-visible,
@@ -2680,13 +2621,11 @@ footer h4 {
 .low-power .nav-contact,
 .low-power .burger,
 .low-power .hero-bg,
-.low-power .hero-badge,
 .low-power .hero h1,
 .low-power .hero p.lead,
 .low-power .hero-cta,
 .low-power .hero-rating,
 .low-power .hero-inner,
-.low-power .features--atelier::after,
 .low-power footer::after,
 .low-power .foot-giant,
 .low-power .foot-giant.reveal.is-visible,
@@ -2832,6 +2771,10 @@ footer h4 {
     background: #fff
   }
 
+  main {
+    background: none
+  }
+
   .hero {
     min-height: auto;
     border-radius: 0
@@ -2912,10 +2855,6 @@ footer h4 {
   margin-top: 1.4rem
 }
 
-.team {
-  background: linear-gradient(180deg, var(--porcellana) 0%, var(--velo) 100%)
-}
-
 .team-grid {
   display: grid;
   gap: 1.25rem;
@@ -2984,11 +2923,7 @@ footer h4 {
 
 /* Servizi: barra categorie */
 .servizi-elenco {
-  padding-top: 1rem;
-  background:
-    radial-gradient(ellipse 40% 25% at 0% 18%, rgba(222, 163, 179, .28), transparent 70%),
-    radial-gradient(ellipse 40% 25% at 100% 62%, rgba(230, 203, 149, .26), transparent 70%),
-    linear-gradient(180deg, var(--porcellana), var(--velo))
+  padding-top: 1rem
 }
 
 .cat-nav-wrap {
@@ -2996,7 +2931,17 @@ footer h4 {
   top: 4.9rem;
   z-index: 20;
   padding: .7rem 0;
-  background: linear-gradient(180deg, var(--porcellana) 65%, rgba(251, 246, 244, 0))
+  background: transparent;
+  transition: background .35s ease, box-shadow .35s ease
+}
+
+/* Solo quando la barra si aggancia in alto prende il vetro,
+   così a riposo non crea una fascia di colore sopra la sezione */
+.cat-nav-wrap.is-stuck {
+  background: rgba(251, 246, 244, .82);
+  backdrop-filter: blur(16px) saturate(1.25);
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  box-shadow: 0 14px 28px -26px rgba(58, 26, 43, .55)
 }
 
 .cat-nav {

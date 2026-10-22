@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servizi e prezzi · Les Folies Jesolo</title>
+  <meta name="description" content="Trattamenti viso e corpo, ricostruzione unghie, trucco semipermanente Biotek, extension ciglia ed epilazione a Lido di Jesolo. Durata e prezzi di ogni trattamento.">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Les Folies">
+  <meta property="og:title" content="Servizi e prezzi · Les Folies Jesolo">
+  <meta property="og:description" content="Trattamenti viso e corpo, ricostruzione unghie, trucco semipermanente Biotek, extension ciglia ed epilazione a Lido di Jesolo. Durata e prezzi di ogni trattamento.">
+  <meta name="theme-color" content="#A04264">
+  <link rel="icon" href="https://lesfoilesjesolo.livenbit.it/images/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Jost:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="contenitore nav">
+      <a class="brand" href="index.html" aria-label="Les Folies, torna alla home">
+        <img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png" alt="Les Folies"
+          onerror="this.style.display='none'">
+      </a>
+      <nav class="nav-links">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="chi-siamo.html">Chi siamo</a>
+        <a class="nav-link active" href="servizi.html" aria-current="page">Servizi</a>
+        <a class="nav-link" href="contatti.html">Contatti</a>
+        <a class="nav-contact" href="tel:+393485286211" aria-label="Chiama Les Folies: +39 348 528 6211"><svg
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z" />
+          </svg><span>+39 348 528 6211</span></a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false"
+        aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-backdrop" data-close></div>
+    <div class="mobile-panel" role="dialog" aria-label="Menu di navigazione">
+      <nav class="mobile-nav" aria-label="Navigazione principale">
+        <a href="index.html"><span>Home</span><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+        <a href="chi-siamo.html"><span>Chi siamo</span><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+        <a href="servizi.html" class="current" aria-current="page"><span>Servizi</span><svg viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+        <a href="contatti.html"><span>Contatti</span><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+      </nav>
+      <div class="mobile-contact">
+        <a class="tel" href="tel:+393485286211">+39 348 528 6211</a>
+        <span>Piazza Nicolò Tommaseo, 2A · Lido di Jesolo</span>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero hero-pagina">
+      <div class="contenitore hero-inner">
+        <span class="hero-badge">✦ Servizi</span>
+        <h1>Trattamenti e <em>prezzi</em></h1>
+        <p class="lead">Ogni trattamento indica durata e prezzo. Per i percorsi più personali, come il trucco semipermanente, la ricostruzione e l'epilazione laser, il prezzo si definisce dopo la consulenza, che è sempre gratuita.</p>
+      </div>
+    </section>
+
+    <section class="servizi-elenco">
+      <div class="cat-nav-wrap">
+        <div class="contenitore">
+          <nav class="cat-nav" aria-label="Categorie di trattamenti">
+          <a href="#viso">Viso</a>
+          <a href="#corpo">Corpo</a>
+          <a href="#unghie">Mani e piedi</a>
+          <a href="#semipermanente">Trucco semipermanente</a>
+          <a href="#sguardo">Ciglia e sopracciglia</a>
+          <a href="#epilazione">Epilazione</a>
+          </nav>
+        </div>
+      </div>
+      <div class="contenitore">
+        <section class="categoria" id="viso" aria-labelledby="t-viso">
+          <div class="categoria-intro">
+            <div class="categoria-foto"><img loading="lazy" decoding="async" src="https://lesfoilesjesolo.livenbit.it/images/pulizia-viso-idratante-e-detossinante.jpg" alt="Trattamento viso con cosmesi PNEI" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=1400&amp;q=80'"></div>
+            <h2 id="t-viso">Viso</h2>
+            <p>Trattamenti personalizzati con cosmesi PNEI, senza parabeni né petrolati.</p>
+          </div>
+          <div class="voci">
+            <article class="voce">
+              <div>
+                <h3>Pulizia viso idratante e detossinante</h3>
+                <p>Consulenza e analisi della pelle, latte detergente, esfoliazione, estrazione delle impurità e crema idratante nutriente. Una pelle rigenerata, sana e luminosa.</p>
+                <div class="voce-meta"><span class="chip-durata">1h</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">50&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=pulizia-viso-idratante" target="_blank" rel="noopener"
+                  aria-label="Prenota: Pulizia viso idratante e detossinante">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Trattamento viso personalizzato PNEI</h3>
+                <p>Protocollo costruito sulla tua pelle con la neurocosmesi PNEI: peptidi, fosfolipidi e aloina agiscono in sinergia con sistema nervoso, endocrino e immunitario.</p>
+                <div class="voce-meta"><span class="chip-durata">1h</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">55&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=trattamento-viso-pnei" target="_blank" rel="noopener"
+                  aria-label="Prenota: Trattamento viso personalizzato PNEI">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Trattamento viso anti-age</h3>
+                <p>Trattamento intensivo rassodante e rimpolpante per attenuare rughe e perdita di tono.</p>
+                <div class="voce-meta"><span class="chip-durata">1h 15min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">70&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=trattamento-anti-age" target="_blank" rel="noopener"
+                  aria-label="Prenota: Trattamento viso anti-age">Prenota</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="categoria" id="corpo" aria-labelledby="t-corpo">
+          <div class="categoria-intro">
+            <div class="categoria-foto"><img loading="lazy" decoding="async" src="https://lesfoilesjesolo.livenbit.it/images/pressoterapia-rimodellante-LinfoDerm.jpg" alt="Pressoterapia rimodellante LinfoDerm" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&amp;fit=crop&amp;w=1400&amp;q=80'"></div>
+            <h2 id="t-corpo">Corpo</h2>
+            <p>Rimodellanti, drenanti e rituali di benessere con apparecchiature di ultima generazione.</p>
+          </div>
+          <div class="voci">
+            <article class="voce">
+              <div>
+                <h3>Pressoterapia rimodellante LinfoDerm</h3>
+                <p>Gambali gonfiabili a pressioni differenziate agiscono sulla circolazione venosa e linfatica: effetto rimodellante, tonificante e drenante sui liquidi in eccesso.</p>
+                <div class="voce-meta"><span class="chip-durata">30 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">40&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=pressoterapia-linfoderm" target="_blank" rel="noopener"
+                  aria-label="Prenota: Pressoterapia rimodellante LinfoDerm">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Scrub total body</h3>
+                <p>Esfoliazione completa che libera la pelle dalle cellule morte e la prepara ad assorbire i principi attivi: pelle liscia e vellutata.</p>
+                <div class="voce-meta"><span class="chip-durata">45 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">53&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=scrub-total-body" target="_blank" rel="noopener"
+                  aria-label="Prenota: Scrub total body">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Massaggio rilassante</h3>
+                <p>Manualità lente e avvolgenti per sciogliere le tensioni di collo, spalle e schiena.</p>
+                <div class="voce-meta"><span class="chip-durata">50 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">55&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=massaggio-rilassante" target="_blank" rel="noopener"
+                  aria-label="Prenota: Massaggio rilassante">Prenota</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="categoria" id="unghie" aria-labelledby="t-unghie">
+          <div class="categoria-intro">
+            <div class="categoria-foto"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Cura di mani e unghie"></div>
+            <h2 id="t-unghie">Mani e piedi</h2>
+            <p>Ricostruzione in gel, semipermanente e cura completa di mani e piedi.</p>
+          </div>
+          <div class="voci">
+            <article class="voce">
+              <div>
+                <h3>Ricostruzione unghie in gel</h3>
+                <p>Ricostruzione su misura con gel di qualità professionale: forma, lunghezza e finitura scelte insieme a te.</p>
+                <div class="voce-meta"><span class="chip-durata">1h 30min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price"><small>da</small>45&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=ricostruzione-unghie-gel" target="_blank" rel="noopener"
+                  aria-label="Prenota: Ricostruzione unghie in gel">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Refill ricostruzione gel</h3>
+                <p>Mantenimento della ricostruzione con riempimento della ricrescita e nuova finitura.</p>
+                <div class="voce-meta"><span class="chip-durata">1h 15min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">35&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=refill-gel" target="_blank" rel="noopener"
+                  aria-label="Prenota: Refill ricostruzione gel">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Smalto semipermanente mani</h3>
+                <p>Colore brillante e resistente per settimane, con cura della cuticola.</p>
+                <div class="voce-meta"><span class="chip-durata">45 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">25&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=semipermanente-mani" target="_blank" rel="noopener"
+                  aria-label="Prenota: Smalto semipermanente mani">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Manicure estetica</h3>
+                <p>Limatura, cura delle cuticole e trattamento idratante delle mani.</p>
+                <div class="voce-meta"><span class="chip-durata">30 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">18&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=manicure" target="_blank" rel="noopener"
+                  aria-label="Prenota: Manicure estetica">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Pedicure estetico</h3>
+                <p>Cura completa del piede: unghie, cuticole, callosità e massaggio finale.</p>
+                <div class="voce-meta"><span class="chip-durata">50 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">30&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=pedicure-estetico" target="_blank" rel="noopener"
+                  aria-label="Prenota: Pedicure estetico">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Smalto semipermanente piedi</h3>
+                <p>Semipermanente sui piedi, abbinabile al pedicure estetico.</p>
+                <div class="voce-meta"><span class="chip-durata">45 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">28&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=semipermanente-piedi" target="_blank" rel="noopener"
+                  aria-label="Prenota: Smalto semipermanente piedi">Prenota</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="categoria" id="semipermanente" aria-labelledby="t-semipermanente">
+          <div class="categoria-intro">
+            <div class="categoria-foto"><img loading="lazy" decoding="async" src="https://lesfoilesjesolo.livenbit.it/images/semipermanente-sopracciglia.jpg" alt="Trucco semipermanente alle sopracciglia" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=1400&amp;q=80'"></div>
+            <h2 id="t-semipermanente">Trucco semipermanente</h2>
+            <p>Dermopigmentazione con coloranti certificati Biotek: sopracciglia, occhi e labbra.</p>
+          </div>
+          <div class="voci">
+            <article class="voce">
+              <div>
+                <h3>Semipermanente sopracciglia</h3>
+                <p>Dermopigmentazione a pelo o effetto sfumato con coloranti certificati Biotek. Include consulenza sulla forma e ritocco di controllo.</p>
+                <div class="voce-meta"><span class="chip-durata">2h</span><span class="chip-nota">su consulenza</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price"><small>da</small>250&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=semipermanente-sopracciglia" target="_blank" rel="noopener"
+                  aria-label="Prenota: Semipermanente sopracciglia">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Semipermanente occhi (eyeliner)</h3>
+                <p>Definizione della rima ciliare per uno sguardo intenso senza matita, ogni mattina.</p>
+                <div class="voce-meta"><span class="chip-durata">1h 30min</span><span class="chip-nota">su consulenza</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price"><small>da</small>200&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=semipermanente-eyeliner" target="_blank" rel="noopener"
+                  aria-label="Prenota: Semipermanente occhi (eyeliner)">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Semipermanente labbra</h3>
+                <p>Ridefinizione del contorno e del colore delle labbra, con effetto naturale e luminoso.</p>
+                <div class="voce-meta"><span class="chip-durata">2h 30min</span><span class="chip-nota">su consulenza</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price"><small>da</small>300&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=semipermanente-labbra" target="_blank" rel="noopener"
+                  aria-label="Prenota: Semipermanente labbra">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Ritocco trucco semipermanente</h3>
+                <p>Mantenimento annuale del semipermanente già eseguito in salone.</p>
+                <div class="voce-meta"><span class="chip-durata">1h</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price"><small>da</small>80&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=ritocco-semipermanente" target="_blank" rel="noopener"
+                  aria-label="Prenota: Ritocco trucco semipermanente">Prenota</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="categoria" id="sguardo" aria-labelledby="t-sguardo">
+          <div class="categoria-intro">
+            <div class="categoria-foto"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Trattamenti per ciglia e sguardo"></div>
+            <h2 id="t-sguardo">Ciglia e sopracciglia</h2>
+            <p>Extension, laminazione e architettura dello sguardo.</p>
+          </div>
+          <div class="voci">
+            <article class="voce">
+              <div>
+                <h3>Extension ciglia one to one</h3>
+                <p>Applicazione ciglia a ciglia per un infoltimento naturale e su misura.</p>
+                <div class="voce-meta"><span class="chip-durata">2h</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price"><small>da</small>80&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=extension-ciglia" target="_blank" rel="noopener"
+                  aria-label="Prenota: Extension ciglia one to one">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Refill extension ciglia</h3>
+                <p>Mantenimento delle extension ogni tre o quattro settimane.</p>
+                <div class="voce-meta"><span class="chip-durata">1h</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">45&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=refill-extension" target="_blank" rel="noopener"
+                  aria-label="Prenota: Refill extension ciglia">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Laminazione ciglia</h3>
+                <p>Curvatura e nutrimento delle ciglia naturali: effetto sguardo aperto per settimane.</p>
+                <div class="voce-meta"><span class="chip-durata">1h</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">50&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=laminazione-ciglia" target="_blank" rel="noopener"
+                  aria-label="Prenota: Laminazione ciglia">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Colorazione ciglia</h3>
+                <p>Tinta delle ciglia per definire lo sguardo senza mascara.</p>
+                <div class="voce-meta"><span class="chip-durata">20 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">12&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=colorazione-ciglia" target="_blank" rel="noopener"
+                  aria-label="Prenota: Colorazione ciglia">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Architettura sopracciglia</h3>
+                <p>Studio della forma, epilazione di precisione e tinta.</p>
+                <div class="voce-meta"><span class="chip-durata">30 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">18&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=architettura-sopracciglia" target="_blank" rel="noopener"
+                  aria-label="Prenota: Architettura sopracciglia">Prenota</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="categoria" id="epilazione" aria-labelledby="t-epilazione">
+          <div class="categoria-intro">
+            <div class="categoria-foto"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&amp;fit=crop&amp;w=1400&amp;q=80" alt="Trattamenti di epilazione"></div>
+            <h2 id="t-epilazione">Epilazione</h2>
+            <p>Epilazione laser e cerette con prodotti delicati.</p>
+          </div>
+          <div class="voci">
+            <article class="voce">
+              <div>
+                <h3>Consulenza epilazione laser</h3>
+                <p>Valutazione di fototipo, zona e numero di sedute necessarie. Gratuita e senza impegno.</p>
+                <div class="voce-meta"><span class="chip-durata">30 min</span><span class="chip-nota">su consulenza</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">Gratuita</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=consulenza-laser" target="_blank" rel="noopener"
+                  aria-label="Prenota: Consulenza epilazione laser">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Ceretta gambe complete</h3>
+                <p>Epilazione con cera delicata su gambe intere.</p>
+                <div class="voce-meta"><span class="chip-durata">40 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">25&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=ceretta-gambe" target="_blank" rel="noopener"
+                  aria-label="Prenota: Ceretta gambe complete">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Ceretta inguine</h3>
+                <p>Epilazione inguine, parziale o totale.</p>
+                <div class="voce-meta"><span class="chip-durata">20 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">15&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=ceretta-inguine" target="_blank" rel="noopener"
+                  aria-label="Prenota: Ceretta inguine">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Ceretta ascelle</h3>
+                <p>Epilazione ascelle rapida e precisa.</p>
+                <div class="voce-meta"><span class="chip-durata">15 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">10&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=ceretta-ascelle" target="_blank" rel="noopener"
+                  aria-label="Prenota: Ceretta ascelle">Prenota</a>
+              </div>
+            </article>
+            <article class="voce">
+              <div>
+                <h3>Ceretta baffetti</h3>
+                <p>Epilazione del labbro superiore.</p>
+                <div class="voce-meta"><span class="chip-durata">10 min</span></div>
+              </div>
+              <div class="voce-prezzo">
+                <span class="price">7&nbsp;€</span>
+                <a class="prenota" href="https://lesfoilesjesolo.livenbit.it/prenota?servizio=ceretta-baffetti" target="_blank" rel="noopener"
+                  aria-label="Prenota: Ceretta baffetti">Prenota</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contatti">
+    <div class="contenitore">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a class="brand" href="index.html"><img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png"
+              alt="Les Folies"><span class="logo-text"><b>Les Folies</b><span>estetica ·
+                jesolo</span></span></a>
+          <p>Il tuo atelier del benessere a Lido di Jesolo. Trattamenti su misura con cosmesi PNEI e trucco
+            semipermanente certificato Biotek.</p>
+          <div class="social">
+            <a href="https://www.instagram.com/lesfoliesestetica_jesolo/" target="_blank" rel="noopener"
+              aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="#fff" />
+              </svg></a>
+            <a href="https://www.facebook.com/lesfoliesestetica/" target="_blank" rel="noopener"
+              aria-label="Facebook"><svg viewBox="0 0 24 24" fill="#fff">
+                <path
+                  d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="foot-col foot-col--nav">
+          <h4>Esplora</h4>
+          <ul class="foot-list foot-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi siamo</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+          </ul>
+        </div>
+        <div class="foot-col foot-col--contact">
+          <h4>Dove siamo</h4>
+          <ul class="foot-list foot-contact">
+            <li><a href="https://maps.google.com/?q=Piazza+Nicolò+Tommaseo+2A+Jesolo" target="_blank"
+                rel="noopener"><span class="foot-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11z" />
+                    <circle cx="12" cy="10" r="2.6" />
+                  </svg></span><span>Piazza Nicolò Tommaseo, 2A<br>30016 Lido di Jesolo (VE)</span></a></li>
+            <li><a href="tel:+393485286211"><span class="foot-ico" aria-hidden="true"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.8a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.8 2.1z" />
+                  </svg></span><span>+39 348 528 6211</span></a></li>
+            <li><a href="mailto:info@lesfoliesjesolo.it"><span class="foot-ico" aria-hidden="true"><svg
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="5" width="18" height="14" rx="2.5" />
+                    <path d="m3.5 7 8.5 6 8.5-6" />
+                  </svg></span><span>info@lesfoliesjesolo.it</span></a></li>
+          </ul>
+        </div>
+        <div class="foot-col foot-col--hours">
+          <h4>Orari</h4>
+          <ul class="foot-list hours">
+            <li><span>Lunedì</span><span>13:00 – 19:00</span></li>
+            <li><span>Martedì</span><span>10:00 – 19:00</span></li>
+            <li><span>Mercoledì</span><span>10:00 – 19:00</span></li>
+            <li><span>Giovedì</span><span>10:00 – 19:00</span></li>
+            <li><span>Venerdì</span><span>10:00 – 19:00</span></li>
+            <li><span>Sabato</span><span>10:00 – 17:00</span></li>
+            <li><span>Domenica</span><span>Chiuso</span></li>
+          </ul>
+          <span class="foot-note">Su appuntamento, anche fuori orario</span>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Les Folies di Sandra Bensi · P.IVA 04019240276</span>
+        <span><a href="https://lesfoilesjesolo.livenbit.it/privacy" target="_blank" rel="noopener">Privacy e cookie</a></span>
+      </div>
+      <div class="foot-giant" aria-hidden="true">Les Folies</div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/393485286211" target="_blank" rel="noopener" aria-label="WhatsApp"><svg
+      viewBox="0 0 24 24">
+      <path
+        d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.4 1.4z" />
+    </svg></a>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
