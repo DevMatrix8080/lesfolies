@@ -1,0 +1,584 @@
+CSS DELLA NAVBAR
+================
+
+/* 04 · HEADER E NAVIGAZIONE =============================================== */
+header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: var(--z-fisso);
+  padding: 1.15rem 0;
+  background: linear-gradient(180deg, rgba(31, 15, 24, .5), rgba(31, 15, 24, 0));
+  transition: inset .55s var(--ease), border-radius .55s var(--ease), background .4s ease, box-shadow .4s ease, padding .4s var(--ease), border-color .4s ease
+}
+
+header.scrolled {
+  inset: .7rem .7rem auto .7rem;
+  border-radius: 9999px;
+  background: rgba(251, 246, 244, .8);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  border: 1px solid rgba(173, 58, 96, .14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .75), 0 20px 45px -26px rgba(58, 26, 43, .55);
+  padding: .45rem 0
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: 72rem;
+  min-height: 48px
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto
+}
+
+.logo-img {
+  height: 48px;
+  width: auto;
+  filter: brightness(0) invert(1) drop-shadow(0 4px 12px rgba(31, 15, 24, .25));
+  transition: filter .35s ease, height .35s var(--ease), transform .35s var(--ease)
+}
+
+.brand:hover .logo-img {
+  transform: translateY(-1px) scale(1.015)
+}
+
+header.scrolled .logo-img {
+  height: 40px;
+  filter: none
+}
+
+.nav-links {
+  display: none;
+  align-items: center;
+  gap: clamp(1.3rem, 2.6vw, 2.4rem)
+}
+
+@media(min-width:768px) {
+  .nav-links {
+    display: flex
+  }
+}
+
+.nav-link {
+  position: relative;
+  font-size: .93rem;
+  font-weight: 400;
+  letter-spacing: .035em;
+  color: rgba(255, 255, 255, .74);
+  padding: .55rem 0;
+  transition: color .3s ease
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: .2rem;
+  height: 1px;
+  background: currentColor;
+  opacity: .65;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .4s var(--ease), opacity .3s ease
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #fff
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1)
+}
+
+header.scrolled .nav-link {
+  color: var(--testo-3)
+}
+
+header.scrolled .nav-link::after {
+  background: linear-gradient(90deg, transparent, var(--rosa-500), transparent)
+}
+
+header.scrolled .nav-link:hover,
+header.scrolled .nav-link.active {
+  color: var(--rosa-600)
+}
+
+.nav-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .55rem;
+  width: 44px;
+  height: 44px;
+  font-size: 0;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .3);
+  background: rgba(255, 255, 255, .09);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  transition: background .3s ease, border-color .3s ease, transform .3s var(--ease), box-shadow .3s ease;
+  white-space: nowrap
+}
+
+.nav-contact svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  stroke-width: 1.6
+}
+
+.nav-contact span {
+  display: none
+}
+
+.nav-contact:hover {
+  background: rgba(255, 255, 255, .2);
+  border-color: rgba(255, 255, 255, .72);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px -14px rgba(31, 15, 24, .7)
+}
+
+.nav-contact:active {
+  transform: scale(.94)
+}
+
+header.scrolled .nav-contact {
+  border-color: transparent;
+  background: linear-gradient(140deg, var(--rosa-500), var(--rosa-700));
+  box-shadow: 0 12px 24px -14px rgba(173, 58, 96, .8)
+}
+
+header.scrolled .nav-contact:hover {
+  background: linear-gradient(140deg, var(--rosa-600), var(--rosa-800));
+  transform: translateY(-2px)
+}
+
+@media(min-width:1100px) {
+  .nav-contact {
+    width: auto;
+    height: auto;
+    padding: .68rem 1.1rem;
+    font-size: .82rem;
+    letter-spacing: .02em
+  }
+
+  .nav-contact span {
+    display: inline
+  }
+}
+
+@media(max-width:767px) {
+  .nav {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem
+  }
+
+  .logo-img {
+    height: 42px
+  }
+
+  header.scrolled {
+    inset: .5rem .5rem auto .5rem
+  }
+}
+
+@media(prefers-reduced-motion:no-preference) {
+  .brand,
+  .nav-link,
+  .nav-contact,
+  .burger {
+    animation: nav-entra .8s var(--ease) both
+  }
+
+  .brand {
+    animation-delay: .05s
+  }
+
+  .nav-link:nth-child(1) {
+    animation-delay: .12s
+  }
+
+  .nav-link:nth-child(2) {
+    animation-delay: .18s
+  }
+
+  .nav-link:nth-child(3) {
+    animation-delay: .24s
+  }
+
+  .nav-link:nth-child(4) {
+    animation-delay: .3s
+  }
+
+  .nav-contact {
+    animation-delay: .36s
+  }
+
+  .burger {
+    animation-delay: .2s
+  }
+
+  @keyframes nav-entra {
+    from {
+      opacity: 0;
+      translate: 0 -12px
+    }
+
+    to {
+      opacity: 1;
+      translate: 0 0
+    }
+  }
+}
+
+
+/* 06 · MENU MOBILE ======================================================== */
+body.menu-open {
+  overflow: hidden;
+  overscroll-behavior: none
+}
+
+body.menu-open header {
+  z-index: var(--z-menu-header)
+}
+
+.burger {
+  position: relative;
+  z-index: var(--z-menu-header);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .45);
+  background: rgba(255, 255, 255, .12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  cursor: pointer;
+  transition: background .35s, transform .25s var(--ease), border-color .35s, box-shadow .35s
+}
+
+.burger span {
+  display: block;
+  width: 19px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: #fff;
+  transition: transform .38s var(--ease), opacity .25s, background .35s
+}
+
+.burger:active {
+  transform: scale(.9)
+}
+
+@media(min-width:768px) {
+  .burger {
+    display: none
+  }
+}
+
+header.scrolled .burger,
+.burger.open,
+header.scrolled .burger.open {
+  border-color: transparent;
+  background: linear-gradient(180deg, var(--rosa-500), var(--rosa-700));
+  box-shadow: var(--ombra-pulsante)
+}
+
+.burger.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg)
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0)
+}
+
+.burger.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg)
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-menu);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .35s ease, visibility 0s linear .35s
+}
+
+.mobile-menu.open {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .35s ease
+}
+
+.mobile-backdrop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(107, 33, 57, .6), rgba(31, 15, 24, .78));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px)
+}
+
+.mobile-panel {
+  position: absolute;
+  inset: 0;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 28rem;
+  width: 100%;
+  background:
+    radial-gradient(circle at 85% 8%, rgba(208, 124, 151, .32) 0, transparent 50%),
+    radial-gradient(circle at 5% 95%, rgba(230, 203, 149, .22) 0, transparent 45%),
+    var(--porcellana);
+  padding: max(6rem, calc(4.5rem + env(safe-area-inset-top, 0px))) max(1.8rem, calc(1.2rem + env(safe-area-inset-right, 0px))) max(2rem, calc(1.5rem + env(safe-area-inset-bottom, 0px))) max(1.8rem, calc(1.2rem + env(safe-area-inset-left, 0px)));
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  transform: translateY(-100%);
+  transition: transform .55s var(--ease)
+}
+
+.mobile-menu.open .mobile-panel {
+  transform: none
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.2rem
+}
+
+.mobile-nav a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: .75rem;
+  min-height: clamp(4.6rem, 12vh, 6.4rem);
+  padding: .6rem .25rem;
+  border-bottom: 1px solid var(--rosa-100);
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 10vw, 4.3rem);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  color: var(--prugna);
+  opacity: 0;
+  transform: translateX(26px);
+  transition: opacity .35s ease, transform .5s var(--ease), color .25s, padding .25s
+}
+
+.mobile-nav a svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  justify-self: end;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: .66;
+  transform: translateX(-.35rem) scale(.88);
+  transition: opacity .3s ease, transform .45s var(--ease), color .3s ease
+}
+
+.mobile-nav a:hover,
+.mobile-nav a:focus-visible,
+.mobile-nav a:active,
+.mobile-nav a.current {
+  color: var(--rosa-600);
+  padding-inline: .5rem
+}
+
+.mobile-nav a:hover svg,
+.mobile-nav a:focus-visible svg,
+.mobile-nav a.current svg {
+  opacity: 1;
+  color: var(--rosa-600);
+  transform: translateX(0) scale(1.08)
+}
+
+.mobile-menu.open .mobile-nav a {
+  opacity: 1;
+  transform: none
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(1) {
+  transition-delay: .09s
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(2) {
+  transition-delay: .15s
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(3) {
+  transition-delay: .21s
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(4) {
+  transition-delay: .27s
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(1) svg {
+  transition-delay: .14s
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(2) svg {
+  transition-delay: .2s
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(3) svg {
+  transition-delay: .26s
+}
+
+.mobile-menu.open .mobile-nav a:nth-child(4) svg {
+  transition-delay: .32s
+}
+
+.mobile-contact {
+  margin-top: auto;
+  padding-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  font-size: .92rem;
+  color: var(--testo-3);
+  opacity: 0;
+  transition: opacity .4s ease
+}
+
+.mobile-menu.open .mobile-contact {
+  opacity: 1;
+  transition-delay: .4s
+}
+
+.mobile-contact a.tel {
+  font-weight: 500;
+  color: var(--rosa-700);
+  font-size: 1.1rem;
+  letter-spacing: .02em
+}
+
+
+HTML DELLA NAVBAR
+=================
+
+  <header id="header">
+    <div class="contenitore nav">
+      <a class="brand" href="index.html" aria-label="Les Folies, torna alla home">
+        <img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png" alt="Les Folies"
+          onerror="this.style.display='none'">
+      </a>
+      <nav class="nav-links">
+        <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="chi-siamo.html">Chi siamo</a>
+        <a class="nav-link" href="servizi.html">Servizi</a>
+        <a class="nav-link" href="contatti.html">Contatti</a>
+        <a class="nav-contact" href="tel:+393485286211" aria-label="Chiama Les Folies: +39 348 528 6211"><svg
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z" />
+          </svg><span>+39 348 528 6211</span></a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Apri il menu" aria-expanded="false"
+        aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-backdrop" data-close></div>
+    <div class="mobile-panel" role="dialog" aria-label="Menu di navigazione">
+      <nav class="mobile-nav" aria-label="Navigazione principale">
+        <a href="index.html" class="current" aria-current="page"><span>Home</span><svg viewBox="0 0 24 24"
+            aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+        <a href="chi-siamo.html"><span>Chi siamo</span><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+        <a href="servizi.html"><span>Servizi</span><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+        <a href="contatti.html"><span>Contatti</span><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg></a>
+      </nav>
+      <div class="mobile-contact">
+        <a class="tel" href="tel:+393485286211">+39 348 528 6211</a>
+        <span>Piazza Nicolò Tommaseo, 2A · Lido di Jesolo</span>
+      </div>
+    </div>
+  </div>
+
+
+JAVASCRIPT DELLA NAVBAR
+=======================
+
+const header = document.getElementById("header");
+addEventListener(
+  "scroll",
+  () => header.classList.toggle("scrolled", scrollY > 40),
+  { passive: true },
+);
+
+const burger = document.getElementById("burger");
+const mm = document.getElementById("mobileMenu");
+const menuLinks = [...mm.querySelectorAll(".mobile-nav a")];
+
+function setMenu(open) {
+  mm.classList.toggle("open", open);
+  burger.classList.toggle("open", open);
+  burger.setAttribute("aria-expanded", open);
+  burger.setAttribute("aria-label", open ? "Chiudi il menu" : "Apri il menu");
+  mm.setAttribute("aria-hidden", !open);
+  document.body.classList.toggle("menu-open", open);
+  if (open) menuLinks[0]?.focus({ preventScroll: true });
+  else burger.focus({ preventScroll: true });
+}
+
+burger.addEventListener("click", () => setMenu(!mm.classList.contains("open")));
+mm.querySelector("[data-close]").addEventListener("click", () =>
+  setMenu(false),
+);
+menuLinks.forEach((a) => a.addEventListener("click", () => setMenu(false)));
+mm.addEventListener("keydown", (e) => {
+  if (e.key !== "Tab" || !mm.classList.contains("open")) return;
+  const first = menuLinks[0];
+  const last = mm.querySelector(".mobile-contact a");
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
+});
+addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && mm.classList.contains("open")) setMenu(false);
+});
+addEventListener("resize", () => {
+  if (matchMedia("(min-width: 768px)").matches && mm.classList.contains("open"))
+    setMenu(false);
+});
+
+
+NOTE
+====
+
+La navbar usa i token globali (--prugna, --rosa-500, --rosa-600, --rosa-700, --rosa-800, --testo-3, --font-display, --ease, --z-fisso, --z-menu, --z-menu-header, --ombra-pulsante).
+
+Per cambiare la voce attiva, aggiornare sia .nav-link.active/aria-current sia .mobile-nav a.current/aria-current.
