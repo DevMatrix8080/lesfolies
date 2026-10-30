@@ -100,16 +100,16 @@ header.scrolled .logo-img {
 }
 
 header.scrolled .nav-link {
-  color: var(--testo-3)
+  color: var(--text-tertiary)
 }
 
 header.scrolled .nav-link::after {
-  background: linear-gradient(90deg, transparent, var(--rosa-500), transparent)
+  background: linear-gradient(90deg, transparent, var(--rose-500), transparent)
 }
 
 header.scrolled .nav-link:hover,
 header.scrolled .nav-link.active {
-  color: var(--rosa-600)
+  color: var(--rose-600)
 }
 
 .nav-contact {
@@ -154,12 +154,12 @@ header.scrolled .nav-link.active {
 
 header.scrolled .nav-contact {
   border-color: transparent;
-  background: linear-gradient(140deg, var(--rosa-500), var(--rosa-700));
+  background: linear-gradient(140deg, var(--rose-500), var(--rose-700));
   box-shadow: 0 12px 24px -14px rgba(173, 58, 96, .8)
 }
 
 header.scrolled .nav-contact:hover {
-  background: linear-gradient(140deg, var(--rosa-600), var(--rosa-800));
+  background: linear-gradient(140deg, var(--rose-600), var(--rose-800));
   transform: translateY(-2px)
 }
 
@@ -294,7 +294,7 @@ header.scrolled .burger,
 .burger.open,
 header.scrolled .burger.open {
   border-color: transparent;
-  background: linear-gradient(180deg, var(--rosa-500), var(--rosa-700));
+  background: linear-gradient(180deg, var(--rose-500), var(--rose-700));
   box-shadow: var(--ombra-pulsante)
 }
 
@@ -344,7 +344,7 @@ header.scrolled .burger.open {
   background:
     radial-gradient(circle at 85% 8%, rgba(208, 124, 151, .32) 0, transparent 50%),
     radial-gradient(circle at 5% 95%, rgba(230, 203, 149, .22) 0, transparent 45%),
-    var(--porcellana);
+    var(--porcelain);
   padding: max(6rem, calc(4.5rem + env(safe-area-inset-top, 0px))) max(1.8rem, calc(1.2rem + env(safe-area-inset-right, 0px))) max(2rem, calc(1.5rem + env(safe-area-inset-bottom, 0px))) max(1.8rem, calc(1.2rem + env(safe-area-inset-left, 0px)));
   display: flex;
   flex-direction: column;
@@ -370,12 +370,12 @@ header.scrolled .burger.open {
   gap: .75rem;
   min-height: clamp(4.6rem, 12vh, 6.4rem);
   padding: .6rem .25rem;
-  border-bottom: 1px solid var(--rosa-100);
+  border-bottom: 1px solid var(--rose-100);
   font-family: var(--font-display);
   font-size: clamp(2.25rem, 10vw, 4.3rem);
   line-height: 1.05;
   letter-spacing: -.01em;
-  color: var(--prugna);
+  color: var(--plum);
   opacity: 0;
   transform: translateX(26px);
   transition: opacity .35s ease, transform .5s var(--ease), color .25s, padding .25s
@@ -399,7 +399,7 @@ header.scrolled .burger.open {
 .mobile-nav a:focus-visible,
 .mobile-nav a:active,
 .mobile-nav a.current {
-  color: var(--rosa-600);
+  color: var(--rose-600);
   padding-inline: .5rem
 }
 
@@ -407,7 +407,7 @@ header.scrolled .burger.open {
 .mobile-nav a:focus-visible svg,
 .mobile-nav a.current svg {
   opacity: 1;
-  color: var(--rosa-600);
+  color: var(--rose-600);
   transform: translateX(0) scale(1.08)
 }
 
@@ -455,7 +455,7 @@ header.scrolled .burger.open {
   flex-direction: column;
   gap: .35rem;
   font-size: .92rem;
-  color: var(--testo-3);
+  color: var(--text-tertiary);
   opacity: 0;
   transition: opacity .4s ease
 }
@@ -467,7 +467,7 @@ header.scrolled .burger.open {
 
 .mobile-contact a.tel {
   font-weight: 500;
-  color: var(--rosa-700);
+  color: var(--rose-700);
   font-size: 1.1rem;
   letter-spacing: .02em
 }
@@ -579,6 +579,6 @@ addEventListener("resize", () => {
 NOTE
 ====
 
-La navbar usa i token globali (--prugna, --rosa-500, --rosa-600, --rosa-700, --rosa-800, --testo-3, --font-display, --ease, --z-fisso, --z-menu, --z-menu-header, --ombra-pulsante).
+La navbar usa i token globali (--plum, --rose-500, --rose-600, --rose-700, --rose-800, --text-tertiary, --font-display, --ease, --z-fisso, --z-menu, --z-menu-header, --ombra-pulsante).
 
 Per cambiare la voce attiva, aggiornare sia .nav-link.active/aria-current sia .mobile-nav a.current/aria-current.

@@ -11,7 +11,7 @@ footer {
   border-radius: var(--raggio-curva) var(--raggio-curva) 0 0;
   background:
     radial-gradient(65% 65% at 88% 0%, rgba(194, 74, 114, .17), transparent 68%),
-    linear-gradient(180deg, #1B0D15 0%, var(--prugna-scuro) 48%, var(--prugna) 100%)
+    linear-gradient(180deg, #1B0D15 0%, var(--plum-dark) 48%, var(--plum) 100%)
 }
 
 footer::before {
@@ -245,7 +245,7 @@ footer h4 {
 }
 
 .foot-contact a:hover .foot-ico {
-  color: var(--champagne-chiaro)
+  color: var(--champagne-light)
 }
 
 .hours {
@@ -541,12 +541,11 @@ HTML DEL FOOTER
             <li><span>Sabato</span><span>10:00 – 17:00</span></li>
             <li><span>Domenica</span><span>Chiuso</span></li>
           </ul>
-          <span class="foot-note">Su appuntamento, anche fuori orario</span>
         </div>
       </div>
       <div class="foot-bottom">
         <span>© 2026 Les Folies di Sandra Bensi · P.IVA 04019240276</span>
-        <span><a href="https://lesfoilesjesolo.livenbit.it/privacy" target="_blank" rel="noopener">Privacy e cookie</a></span>
+        <span>Privacy e cookie</span>
       </div>
       <div class="foot-giant" aria-hidden="true">Les Folies</div>
     </div>
@@ -562,6 +561,6 @@ HTML DEL FOOTER
 NOTE
 ====
 
-Il footer usa i token globali (--prugna, --prugna-scuro, --champagne, --champagne-chiaro, --font-display, --font-text, --ease, --raggio-curva, --z-fisso).
+Il footer usa i token globali (--plum, --plum-dark, --champagne, --champagne-light, --font-display, --font-text, --ease, --raggio-curva, --z-fisso).
 
 Le classi .reveal vengono aggiunte da script.js e devono restare allineate al CSS qui sopra.

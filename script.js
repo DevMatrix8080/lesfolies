@@ -276,11 +276,7 @@ if (animLowPower) document.documentElement.classList.add("low-power");
     contenitoriTitoli.get(contenitore).push(el);
   });
 
-  const animati = new Set([
-    ...contenitoriTitoli.keys(),
-    ...media,
-    ...elementi,
-  ]);
+  const animati = new Set([...contenitoriTitoli.keys(), ...media, ...elementi]);
   if (!animati.size) return;
 
   const segnaVisibile = (el) => {
