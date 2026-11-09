@@ -188,7 +188,10 @@ header.scrolled .nav-contact:hover {
   }
 
   header.scrolled {
-    inset: .5rem .5rem auto .5rem
+    inset: .5rem .5rem auto .5rem;
+    background: rgba(251, 246, 244, .86);
+    -webkit-backdrop-filter: blur(12px) saturate(1.3);
+    backdrop-filter: blur(12px) saturate(1.3)
   }
 }
 
@@ -479,7 +482,7 @@ HTML DELLA NAVBAR
   <header id="header">
     <div class="contenitore nav">
       <a class="brand" href="index.html" aria-label="Les Folies, torna alla home">
-        <img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png" alt="Les Folies"
+        <img class="logo-img" src="images/logo/logo.png" alt="Les Folies"
           onerror="this.style.display='none'">
       </a>
       <nav class="nav-links">

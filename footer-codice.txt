@@ -479,7 +479,7 @@ HTML DEL FOOTER
     <div class="contenitore">
       <div class="foot-grid">
         <div class="foot-brand">
-          <a class="brand" href="index.html"><img class="logo-img" src="https://lesfoilesjesolo.livenbit.it/images/logo/logo.png"
+          <a class="brand" href="index.html"><img class="logo-img" src="images/logo/logo.png"
               alt="Les Folies"><span class="logo-text"><b>Les Folies</b><span>estetica ·
                 jesolo</span></span></a>
           <p>Il tuo atelier del benessere a Lido di Jesolo. Trattamenti su misura con cosmesi PNEI e trucco
