@@ -1054,6 +1054,11 @@ body.menu-open {
   color: rgba(255, 255, 255, .72)
 }
 
+.pnei-photo .about-photo-placeholder {
+  min-height: 460px;
+  aspect-ratio: auto
+}
+
 .pnei-photo img {
   border-radius: var(--arco) var(--arco) var(--raggio-foto) var(--raggio-foto);
   width: 100%;

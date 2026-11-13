@@ -307,12 +307,7 @@ export default function Home() {
             </div>
           </div>
           <div className="pnei-photo">
-            <img
-              loading="lazy"
-              decoding="async"
-              src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=80"
-              alt="Rituale viso con cosmesi PNEI"
-            />
+            <AboutPhoto label="Spazio per la foto" />
           </div>
         </div>
       </section>

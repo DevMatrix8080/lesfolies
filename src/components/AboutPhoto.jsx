@@ -1,5 +1,5 @@
 /* Segnaposto fotografico del centro (con badge anno opzionale) */
-export default function AboutPhoto({ badge }) {
+export default function AboutPhoto({ badge, label = 'Uno spazio per la vostra storia' }) {
   return (
     <div
       className="about-photo about-photo-placeholder"
@@ -13,7 +13,7 @@ export default function AboutPhoto({ badge }) {
           <path d="m8 35 11-10 7 6 5-5 9 10" />
         </svg>
       </div>
-      <span>Uno spazio per la vostra storia</span>
+      <span>{label}</span>
       <i>LES FOLIES · JESOLO</i>
       {badge && (
         <div className="about-exp">
