@@ -163,7 +163,7 @@ export default function Navbar() {
             className={`group/brand flex flex-none items-center ${entra} anim:[animation-delay:.05s]`}
           >
             <img
-              src="/images/logo/logo.png"
+              src={`${import.meta.env.BASE_URL}images/logo/logo.png`}
               alt="Les Folies"
               onError={(e) => (e.currentTarget.style.display = 'none')}
               className={

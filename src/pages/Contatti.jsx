@@ -119,7 +119,7 @@ export default function Contatti() {
               <h2>Orari</h2>
               <ul className="orari-lista">
                 {orari.map((o) => (
-                  <li key={o.giorno} data-giorno={o.giorno} className={o.giorno === oggi ? 'oggi' : undefined}>
+                  <li key={o.giorno} data-giorno={o.giorno} className={[o.giorno === oggi && 'oggi', o.ore === 'Chiuso' && 'chiuso'].filter(Boolean).join(' ') || undefined}>
                     <span>{o.label}</span>
                     <span>{o.ore}</span>
                   </li>

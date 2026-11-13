@@ -62,7 +62,7 @@ const U = (id, w = 800) => `https://images.unsplash.com/${id}?auto=format&fit=cr
 
 const trattamenti = [
   {
-    img: '/images/pulizia-viso-idratante-e-detossinante.jpg',
+    img: `${import.meta.env.BASE_URL}images/pulizia-viso-idratante-e-detossinante.jpg`,
     fallback: U('photo-1570172619644-dfd03ed5d881'),
     alt: 'Pulizia viso idratante e detossinante',
     durata: '1h',
@@ -71,7 +71,7 @@ const trattamenti = [
     prezzo: '50 €',
   },
   {
-    img: '/images/trattamento-viso-personalizzato-PNEI.jpg',
+    img: `${import.meta.env.BASE_URL}images/trattamento-viso-personalizzato-PNEI.jpg`,
     fallback: U('photo-1570172619644-dfd03ed5d881'),
     alt: 'Trattamento viso personalizzato PNEI',
     durata: '1h',
@@ -80,7 +80,7 @@ const trattamenti = [
     prezzo: '55 €',
   },
   {
-    img: '/images/pressoterapia-rimodellante-LinfoDerm.jpg',
+    img: `${import.meta.env.BASE_URL}images/pressoterapia-rimodellante-LinfoDerm.jpg`,
     fallback: U('photo-1519823551278-64ac92734fb1'),
     alt: 'Pressoterapia rimodellante LinfoDerm',
     durata: '30 min',
@@ -98,7 +98,7 @@ const trattamenti = [
     da: true,
   },
   {
-    img: '/images/semipermanente-sopracciglia.jpg',
+    img: `${import.meta.env.BASE_URL}images/semipermanente-sopracciglia.jpg`,
     fallback: U('photo-1512496015851-a90fb38ba796'),
     alt: 'Semipermanente sopracciglia',
     durata: '2h',

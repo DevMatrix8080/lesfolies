@@ -86,7 +86,7 @@ export default function Footer() {
           <div className="foot-brand min-[640px]:col-span-full min-[980px]:col-auto">
             <Link to="/" className="group/brand flex flex-none items-center">
               <img
-                src="/images/logo/logo.png"
+                src={`${import.meta.env.BASE_URL}images/logo/logo.png`}
                 alt="Les Folies"
                 className="h-11 w-auto opacity-[.92] [filter:brightness(0)_invert(1)] [transition:filter_.35s_ease,height_.35s_var(--ease),transform_.35s_var(--ease)] group-hover/brand:[transform:translateY(-1px)_scale(1.015)]"
               />
